@@ -26,7 +26,7 @@ for (var i = 0, k = 0, l = gdjs.MenuCode.GDbuttermilkObjects1.length;i<l;++i) {
 }
 gdjs.MenuCode.GDbuttermilkObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level2", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level3", false);
 }}
 
 }
@@ -68,7 +68,7 @@ for (var i = 0, k = 0, l = gdjs.MenuCode.GDtempuraObjects1.length;i<l;++i) {
 }
 gdjs.MenuCode.GDtempuraObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level3", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level2", false);
 }}
 
 }
