@@ -1,12 +1,14 @@
 gdjs.MenuCode = {};
 gdjs.MenuCode.GDTitleObjects1= [];
 gdjs.MenuCode.GDTitleObjects2= [];
-gdjs.MenuCode.GDbuttermilkObjects1= [];
-gdjs.MenuCode.GDbuttermilkObjects2= [];
+gdjs.MenuCode.GDbbqObjects1= [];
+gdjs.MenuCode.GDbbqObjects2= [];
 gdjs.MenuCode.GDsmokeyObjects1= [];
 gdjs.MenuCode.GDsmokeyObjects2= [];
 gdjs.MenuCode.GDtempuraObjects1= [];
 gdjs.MenuCode.GDtempuraObjects2= [];
+gdjs.MenuCode.GDbuttermilkObjects1= [];
+gdjs.MenuCode.GDbuttermilkObjects2= [];
 
 
 gdjs.MenuCode.eventsList0 = function(runtimeScene) {
@@ -74,6 +76,27 @@ if (isConditionTrue_0) {
 }
 
 
+{
+
+gdjs.copyArray(runtimeScene.getObjects("bbq"), gdjs.MenuCode.GDbbqObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MenuCode.GDbbqObjects1.length;i<l;++i) {
+    if ( gdjs.MenuCode.GDbbqObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.MenuCode.GDbbqObjects1[k] = gdjs.MenuCode.GDbbqObjects1[i];
+        ++k;
+    }
+}
+gdjs.MenuCode.GDbbqObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Bonus", false);
+}}
+
+}
+
+
 };
 
 gdjs.MenuCode.func = function(runtimeScene) {
@@ -81,12 +104,14 @@ runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.MenuCode.GDTitleObjects1.length = 0;
 gdjs.MenuCode.GDTitleObjects2.length = 0;
-gdjs.MenuCode.GDbuttermilkObjects1.length = 0;
-gdjs.MenuCode.GDbuttermilkObjects2.length = 0;
+gdjs.MenuCode.GDbbqObjects1.length = 0;
+gdjs.MenuCode.GDbbqObjects2.length = 0;
 gdjs.MenuCode.GDsmokeyObjects1.length = 0;
 gdjs.MenuCode.GDsmokeyObjects2.length = 0;
 gdjs.MenuCode.GDtempuraObjects1.length = 0;
 gdjs.MenuCode.GDtempuraObjects2.length = 0;
+gdjs.MenuCode.GDbuttermilkObjects1.length = 0;
+gdjs.MenuCode.GDbuttermilkObjects2.length = 0;
 
 gdjs.MenuCode.eventsList0(runtimeScene);
 
