@@ -2,6 +2,9 @@ gdjs.LeaderboardCode = {};
 gdjs.LeaderboardCode.GDtxtObjects1= [];
 gdjs.LeaderboardCode.GDtxtObjects2= [];
 gdjs.LeaderboardCode.GDtxtObjects3= [];
+gdjs.LeaderboardCode.GDMain_9595MenuObjects1= [];
+gdjs.LeaderboardCode.GDMain_9595MenuObjects2= [];
+gdjs.LeaderboardCode.GDMain_9595MenuObjects3= [];
 
 
 gdjs.LeaderboardCode.eventsList0 = function(runtimeScene) {
@@ -63,10 +66,21 @@ if (true)
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("Main_Menu"), gdjs.LeaderboardCode.GDMain_9595MenuObjects1);
 
 let isConditionTrue_0 = false;
-{
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.LeaderboardCode.GDMain_9595MenuObjects1.length;i<l;++i) {
+    if ( gdjs.LeaderboardCode.GDMain_9595MenuObjects1[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.LeaderboardCode.GDMain_9595MenuObjects1[k] = gdjs.LeaderboardCode.GDMain_9595MenuObjects1[i];
+        ++k;
+    }
 }
+gdjs.LeaderboardCode.GDMain_9595MenuObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Menu", false);
+}}
 
 }
 
@@ -114,6 +128,9 @@ runtimeScene.getOnceTriggers().startNewFrame();
 gdjs.LeaderboardCode.GDtxtObjects1.length = 0;
 gdjs.LeaderboardCode.GDtxtObjects2.length = 0;
 gdjs.LeaderboardCode.GDtxtObjects3.length = 0;
+gdjs.LeaderboardCode.GDMain_9595MenuObjects1.length = 0;
+gdjs.LeaderboardCode.GDMain_9595MenuObjects2.length = 0;
+gdjs.LeaderboardCode.GDMain_9595MenuObjects3.length = 0;
 
 gdjs.LeaderboardCode.eventsList2(runtimeScene);
 
